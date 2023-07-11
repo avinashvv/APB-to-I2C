@@ -1,0 +1,9 @@
+#-----------------------------------------------------------
+# Vivado v2012.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Tue Dec 06 14:56:01 2022
+# Process ID: 13076
+# Log file: E:/DSD/avi/adld/apbtoi2c/project_1/project_1.runs/synth_1\apb_i2c_ic.rds
+# Journal file: E:/DSD/avi/adld/apbtoi2c/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source apb_i2c_ic.tcl

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Wed Dec 14 23:13:05 2022
+# Process ID: 20016
+# Log file: E:/DSD/avi/adld/apbtoi2c/planAhead_run_1/planAhead.log
+# Journal file: E:/DSD/avi/adld/apbtoi2c/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/DSD/avi/adld/apbtoi2c/pa.fromHdl.tcl

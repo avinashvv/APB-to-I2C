@@ -1,0 +1,35 @@
+
+*** Running vivado
+    with args -log apb_i2c_ic.rds -m64 -mode batch -messageDb vivado.pb -source apb_i2c_ic.tcl
+
+
+****** Vivado v2012.2 (64-bit)
+  **** Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+    ** Copyright 1986-1999, 2001-2012 Xilinx, Inc. All Rights Reserved.
+
+WARNING: [Vivado 15-2] No 'Implementation' license found.
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+
+source apb_i2c_ic.tcl
+# set_param iopl.termPlaceClean 1
+# read_verilog {
+#   E:/DSD/avi/adld/apbtoi2c/apb_i2c_ic.v
+#   E:/DSD/avi/adld/apbtoi2c/project_1/project_1.srcs/sources_1/new/apb_slave.v
+#   E:/DSD/avi/adld/apbtoi2c/project_1/project_1.srcs/sources_1/new/i2c_bridge.v
+#   E:/DSD/avi/adld/apbtoi2c/project_1/project_1.srcs/sources_1/new/i2c_master.v
+# }
+# set_property webtalk.parent_dir E:/DSD/avi/adld/apbtoi2c/project_1/project_1.data/wt [current_project]
+# synth_design -top apb_i2c_ic -part xc7vx485tffg1157-1
+
+Starting synthesis...
+
+INFO: [Common 17-78] Attempting to get a license: Synthesis
+WARNING: [Common 17-301] Failed to get a license: Synthesis
+INFO: [Common 17-78] Attempting to get a license: Rodin_Synthesis
+WARNING: [Common 17-301] Failed to get a license: Rodin_Synthesis
+INFO: [Common 17-291] Device 'xc7vx485t' license not available: Synthesis
+ERROR: [Common 17-308] A valid license was not found for feature 'Synthesis' targeting device 'xc7vx485t'. Please run the Xilinx License Configuration Manager
+for assistance in determining which features and devices are licensed for your system.
+INFO: [Common 17-206] Exiting Vivado...

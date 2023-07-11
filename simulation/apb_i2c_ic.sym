@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="apb_i2c_ic">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2022-12-14T17:41:7</timestamp>
+    <attr value="apb_i2c_ic" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-480" name="PCLK" />
+    <pin polarity="Input" x="0" y="-416" name="CLK" />
+    <pin polarity="Input" x="0" y="-352" name="PRESETn" />
+    <pin polarity="Input" x="0" y="-288" name="PSEL" />
+    <pin polarity="Input" x="0" y="-224" name="PENABLE" />
+    <pin polarity="Input" x="0" y="-160" name="PWrite" />
+    <pin polarity="Input" x="0" y="-96" name="PADDR(31:0)" />
+    <pin polarity="Input" x="0" y="-32" name="PWDATA(31:0)" />
+    <pin polarity="Output" x="464" y="-480" name="PREADY" />
+    <pin polarity="Output" x="464" y="-368" name="PSLVERR" />
+    <pin polarity="Output" x="464" y="-256" name="PRDATA(31:0)" />
+    <pin polarity="BiDirectional" x="464" y="-144" name="i2c_scl" />
+    <pin polarity="BiDirectional" x="464" y="-32" name="i2c_sda" />
+    <graph>
+        <rect width="336" x="64" y="-512" height="512" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="232" y="-520" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-480" type="pin PCLK" />
+        <line x2="0" y1="-480" y2="-480" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin CLK" />
+        <line x2="0" y1="-416" y2="-416" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin PRESETn" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin PSEL" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin PENABLE" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin PWrite" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin PADDR(31:0)" />
+        <rect width="64" x="0" y="-108" height="24" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin PWDATA(31:0)" />
+        <rect width="64" x="0" y="-44" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-480" type="pin PREADY" />
+        <line x2="464" y1="-480" y2="-480" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-368" type="pin PSLVERR" />
+        <line x2="464" y1="-368" y2="-368" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-256" type="pin PRDATA(31:0)" />
+        <rect width="64" x="400" y="-268" height="24" />
+        <line x2="464" y1="-256" y2="-256" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-144" type="pin i2c_scl" />
+        <line x2="464" y1="-144" y2="-144" x1="400" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="392" y="-32" type="pin i2c_sda" />
+        <line x2="464" y1="-32" y2="-32" x1="400" />
+    </graph>
+</symbol>

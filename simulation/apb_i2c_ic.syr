@@ -1,0 +1,677 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: apb_i2c_ic.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "apb_i2c_ic.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "apb_i2c_ic"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : apb_i2c_ic
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\DSD\avi\adld\apbtoi2c\i2c_master.v" into library work
+Parsing module <i2c_master>.
+Analyzing Verilog file "E:\DSD\avi\adld\apbtoi2c\i2c_bridge.v" into library work
+Parsing module <i2c_bridge>.
+Analyzing Verilog file "E:\DSD\avi\adld\apbtoi2c\apb_slave.v" into library work
+Parsing module <apb_slave>.
+Analyzing Verilog file "E:\DSD\avi\adld\apbtoi2c\apb_i2c_ic.v" into library work
+Parsing module <apb_i2c_ic>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <apb_i2c_ic>.
+
+Elaborating module <apb_slave>.
+
+Elaborating module <i2c_bridge>.
+
+Elaborating module <i2c_master>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <apb_i2c_ic>.
+    Related source file is "E:\DSD\avi\adld\apbtoi2c\apb_i2c_ic.v".
+    Summary:
+	no macro.
+Unit <apb_i2c_ic> synthesized.
+
+Synthesizing Unit <apb_slave>.
+    Related source file is "E:\DSD\avi\adld\apbtoi2c\apb_slave.v".
+WARNING:Xst:647 - Input <PADDR<23:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <i2c_con1>.
+    Found 8-bit register for signal <i2c_con2>.
+    Found 1-bit register for signal <PSLVERR>.
+    Found 32-bit register for signal <Din>.
+    Found 32-bit register for signal <PRDATA>.
+    Found 2-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | PCLK (rising_edge)                             |
+    | Reset              | PRESETn_INV_2_o (positive)                     |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  81 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <apb_slave> synthesized.
+
+Synthesizing Unit <i2c_bridge>.
+    Related source file is "E:\DSD\avi\adld\apbtoi2c\i2c_bridge.v".
+    Found 1-bit register for signal <i2c_stat<6>>.
+    Found 1-bit register for signal <i2c_stat<5>>.
+    Found 1-bit register for signal <i2c_stat<4>>.
+    Found 1-bit register for signal <i2c_stat<3>>.
+    Found 1-bit register for signal <i2c_stat<2>>.
+    Found 1-bit register for signal <i2c_stat<1>>.
+    Found 1-bit register for signal <i2c_stat<0>>.
+    Found 8-bit register for signal <ccount>.
+    Found 1-bit register for signal <clk>.
+    Found 1-bit register for signal <i2c_stat<7>>.
+    Found 8-bit adder for signal <ccount[7]_GND_3_o_add_7_OUT> created at line 100.
+    Found 11-bit comparator greater for signal <GND_3_o_DIV[10]_LessThan_7_o> created at line 99
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  14 Multiplexer(s).
+Unit <i2c_bridge> synthesized.
+
+Synthesizing Unit <i2c_master>.
+    Related source file is "E:\DSD\avi\adld\apbtoi2c\i2c_master.v".
+    Found 4-bit register for signal <state>.
+    Found 4-bit register for signal <nxt_state>.
+    Found 1-bit register for signal <sda>.
+    Found 4-bit register for signal <count>.
+    Found 1-bit register for signal <en>.
+    Found 2-bit register for signal <scount>.
+    Found 32-bit register for signal <Dout>.
+    Found 8-bit register for signal <sav_addr>.
+    Found 32-bit register for signal <n0250[31:0]>.
+    Found 1-bit register for signal <scl>.
+    Found 4-bit subtractor for signal <n0262[3:0]> created at line 157.
+    Found 4-bit adder for signal <count[3]_GND_4_o_add_97_OUT> created at line 203.
+    Found 2-bit adder for signal <scount[1]_GND_4_o_add_118_OUT> created at line 222.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_4_o_sav_addr[7]_Mux_18_o> created at line 124.
+    Found 1-bit 4-to-1 multiplexer for signal <scount[1]_wdata[3][7]_Mux_44_o> created at line 157.
+    Found 1-bit 4-to-1 multiplexer for signal <scount[1]_wdata[3][6]_Mux_45_o> created at line 157.
+    Found 1-bit 4-to-1 multiplexer for signal <scount[1]_wdata[3][5]_Mux_46_o> created at line 157.
+    Found 1-bit 4-to-1 multiplexer for signal <scount[1]_wdata[3][4]_Mux_47_o> created at line 157.
+    Found 1-bit 4-to-1 multiplexer for signal <scount[1]_wdata[3][3]_Mux_48_o> created at line 157.
+    Found 1-bit 4-to-1 multiplexer for signal <scount[1]_wdata[3][2]_Mux_49_o> created at line 157.
+    Found 1-bit 4-to-1 multiplexer for signal <scount[1]_wdata[3][1]_Mux_50_o> created at line 157.
+    Found 1-bit 4-to-1 multiplexer for signal <scount[1]_wdata[3][0]_Mux_51_o> created at line 157.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_4_o_scount[1]_Mux_52_o> created at line 157.
+    Found 4-bit 12-to-1 multiplexer for signal <state[3]_GND_4_o_wide_mux_131_OUT> created at line 94.
+    Found 1-bit tristate buffer for signal <i2c_sda> created at line 62
+    Found 4-bit comparator greater for signal <count[3]_PWR_4_o_LessThan_43_o> created at line 156
+    Found 2-bit comparator equal for signal <scount[1]_bytcount[1]_equal_67_o> created at line 182
+    Found 4-bit comparator lessequal for signal <n0087> created at line 202
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  89 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred 114 Multiplexer(s).
+	inferred   1 Tristate(s).
+Unit <i2c_master> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 25
+ 1-bit register                                        : 13
+ 2-bit register                                        : 1
+ 32-bit register                                       : 4
+ 4-bit register                                        : 3
+ 8-bit register                                        : 4
+# Comparators                                          : 4
+ 11-bit comparator greater                             : 1
+ 2-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 1
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 135
+ 1-bit 2-to-1 multiplexer                              : 89
+ 1-bit 4-to-1 multiplexer                              : 8
+ 1-bit 8-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 3
+ 4-bit 12-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 25
+ 8-bit 2-to-1 multiplexer                              : 2
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <i2c_bridge>.
+The following registers are absorbed into counter <ccount>: 1 register on signal <ccount>.
+Unit <i2c_bridge> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 179
+ Flip-Flops                                            : 179
+# Comparators                                          : 4
+ 11-bit comparator greater                             : 1
+ 2-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 1
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 166
+ 1-bit 2-to-1 multiplexer                              : 121
+ 1-bit 4-to-1 multiplexer                              : 8
+ 1-bit 8-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 2
+ 4-bit 12-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 25
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <apb/FSM_0> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+
+Optimizing unit <apb_i2c_ic> ...
+
+Optimizing unit <apb_slave> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block apb_i2c_ic, actual ratio is 5.
+FlipFlop bridge/controller/count_1 has been replicated 1 time(s)
+FlipFlop bridge/controller/scount_0 has been replicated 1 time(s)
+FlipFlop bridge/controller/scount_1 has been replicated 1 time(s)
+FlipFlop bridge/controller/state_0 has been replicated 1 time(s)
+FlipFlop bridge/controller/state_2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 194
+ Flip-Flops                                            : 194
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : apb_i2c_ic.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 225
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 7
+#      LUT2                        : 18
+#      LUT3                        : 43
+#      LUT4                        : 21
+#      LUT5                        : 18
+#      LUT6                        : 94
+#      MUXCY                       : 7
+#      MUXF7                       : 4
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 194
+#      FD                          : 33
+#      FDC                         : 6
+#      FDE                         : 152
+#      FDR                         : 3
+# Clock Buffers                    : 3
+#      BUFG                        : 1
+#      BUFGP                       : 2
+# IO Buffers                       : 80
+#      IBUF                        : 44
+#      IOBUF                       : 1
+#      OBUF                        : 35
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             194  out of  11440     1%  
+ Number of Slice LUTs:                  204  out of   5720     3%  
+    Number used as Logic:               204  out of   5720     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    287
+   Number with an unused Flip Flop:      93  out of    287    32%  
+   Number with an unused LUT:            83  out of    287    28%  
+   Number of fully used LUT-FF pairs:   111  out of    287    38%  
+   Number of unique control sets:        12
+
+IO Utilization: 
+ Number of IOs:                         106
+ Number of bonded IOBs:                  82  out of    102    80%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 17    |
+bridge/clk                         | BUFG                   | 94    |
+PCLK                               | BUFGP                  | 83    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.540ns (Maximum Frequency: 220.245MHz)
+   Minimum input arrival time before clock: 6.549ns
+   Maximum output required time after clock: 5.677ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'bridge/clk'
+  Clock period: 4.540ns (frequency: 220.245MHz)
+  Total number of paths / destination ports: 1029 / 130
+-------------------------------------------------------------------------
+Delay:               4.540ns (Levels of Logic = 4)
+  Source:            bridge/controller/wdata_0_5 (FF)
+  Destination:       bridge/controller/sda (FF)
+  Source Clock:      bridge/clk rising
+  Destination Clock: bridge/clk rising
+
+  Data Path: bridge/controller/wdata_0_5 to bridge/controller/sda
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.944  bridge/controller/wdata_0_5 (bridge/controller/wdata_0_5)
+     LUT6:I0->O            1   0.203   0.827  bridge/controller/Mmux_state[3]_PWR_4_o_Mux_132_o28 (bridge/controller/Mmux_state[3]_PWR_4_o_Mux_132_o28)
+     LUT6:I2->O            1   0.203   0.827  bridge/controller/Mmux_state[3]_PWR_4_o_Mux_132_o211 (bridge/controller/Mmux_state[3]_PWR_4_o_Mux_132_o211)
+     LUT6:I2->O            1   0.203   0.580  bridge/controller/Mmux_state[3]_PWR_4_o_Mux_132_o214 (bridge/controller/state[3]_PWR_4_o_Mux_132_o)
+     LUT6:I5->O            1   0.205   0.000  bridge/controller/sda_rstpot (bridge/controller/sda_rstpot)
+     FD:D                      0.102          bridge/controller/sda
+    ----------------------------------------
+    Total                      4.540ns (1.363ns logic, 3.177ns route)
+                                       (30.0% logic, 70.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PCLK'
+  Clock period: 3.422ns (frequency: 292.223MHz)
+  Total number of paths / destination ports: 214 / 107
+-------------------------------------------------------------------------
+Delay:               3.422ns (Levels of Logic = 3)
+  Source:            apb/state_FSM_FFd2 (FF)
+  Destination:       apb/i2c_con1_7 (FF)
+  Source Clock:      PCLK rising
+  Destination Clock: PCLK rising
+
+  Data Path: apb/state_FSM_FFd2 to apb/i2c_con1_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.447   0.878  apb/state_FSM_FFd2 (apb/state_FSM_FFd2)
+     LUT3:I1->O            1   0.203   0.580  apb/_n0140_inv3_SW2 (N49)
+     LUT6:I5->O            8   0.205   0.803  apb/_n0140_inv3 (apb/_n0140_inv)
+     LUT5:I4->O            1   0.205   0.000  apb/i2c_con1_7_rstpot (apb/i2c_con1_7_rstpot)
+     FD:D                      0.102          apb/i2c_con1_7
+    ----------------------------------------
+    Total                      3.422ns (1.162ns logic, 2.260ns route)
+                                       (34.0% logic, 66.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 4.404ns (frequency: 227.051MHz)
+  Total number of paths / destination ports: 209 / 10
+-------------------------------------------------------------------------
+Delay:               4.404ns (Levels of Logic = 4)
+  Source:            bridge/ccount_4 (FF)
+  Destination:       bridge/ccount_7 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: bridge/ccount_4 to bridge/ccount_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   0.931  bridge/ccount_4 (bridge/ccount_4)
+     LUT6:I2->O            1   0.203   0.684  bridge/GND_3_o_DIV[10]_LessThan_7_o_inv16_SW1 (N22)
+     LUT6:I4->O            3   0.203   0.651  bridge/GND_3_o_DIV[10]_LessThan_7_o_inv16 (bridge/GND_3_o_DIV[10]_LessThan_7_o_inv15)
+     LUT6:I5->O            7   0.205   0.774  bridge/GND_3_o_DIV[10]_LessThan_7_o_inv17 (bridge/GND_3_o_DIV[10]_LessThan_7_o_inv)
+     LUT2:I1->O            1   0.205   0.000  bridge/ccount_7_rstpot (bridge/ccount_7_rstpot)
+     FD:D                      0.102          bridge/ccount_7
+    ----------------------------------------
+    Total                      4.404ns (1.365ns logic, 3.039ns route)
+                                       (31.0% logic, 69.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'bridge/clk'
+  Total number of paths / destination ports: 18 / 14
+-------------------------------------------------------------------------
+Offset:              4.588ns (Levels of Logic = 5)
+  Source:            i2c_sda (PAD)
+  Destination:       bridge/controller/count_3 (FF)
+  Destination Clock: bridge/clk rising
+
+  Data Path: i2c_sda to bridge/controller/count_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O          11   1.222   1.247  i2c_sda_IOBUF (N8)
+     LUT6:I0->O            1   0.203   0.580  bridge/controller/_n0494_inv4_SW2 (N42)
+     LUT6:I5->O            1   0.205   0.000  bridge/controller/_n0494_inv4_G (N58)
+     MUXF7:I1->O           4   0.140   0.684  bridge/controller/_n0494_inv4 (bridge/controller/_n0494_inv)
+     LUT3:I2->O            1   0.205   0.000  bridge/controller/count_3_rstpot (bridge/controller/count_3_rstpot)
+     FD:D                      0.102          bridge/controller/count_3
+    ----------------------------------------
+    Total                      4.588ns (2.077ns logic, 2.511ns route)
+                                       (45.3% logic, 54.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PCLK'
+  Total number of paths / destination ports: 969 / 155
+-------------------------------------------------------------------------
+Offset:              6.549ns (Levels of Logic = 4)
+  Source:            PADDR<26> (PAD)
+  Destination:       apb/Din_31 (FF)
+  Destination Clock: PCLK rising
+
+  Data Path: PADDR<26> to apb/Din_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.808  PADDR_26_IBUF (PADDR_26_IBUF)
+     LUT3:I0->O            1   0.205   0.580  apb/PADDR[31]_GND_2_o_equal_7_o<31>_SW0 (N6)
+     LUT6:I5->O           36   0.205   1.713  apb/PADDR[31]_GND_2_o_equal_7_o<31> (apb/PADDR[31]_GND_2_o_equal_7_o)
+     LUT6:I0->O           32   0.203   1.291  apb/_n0158_inv1 (apb/_n0158_inv)
+     FDE:CE                    0.322          apb/Din_0
+    ----------------------------------------
+    Total                      6.549ns (2.157ns logic, 4.392ns route)
+                                       (32.9% logic, 67.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PCLK'
+  Total number of paths / destination ports: 34 / 34
+-------------------------------------------------------------------------
+Offset:              4.576ns (Levels of Logic = 2)
+  Source:            apb/state_FSM_FFd1 (FF)
+  Destination:       PREADY (PAD)
+  Source Clock:      PCLK rising
+
+  Data Path: apb/state_FSM_FFd1 to PREADY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.447   0.774  apb/state_FSM_FFd1 (apb/state_FSM_FFd1)
+     LUT2:I1->O            1   0.205   0.579  apb/PREADY1 (PREADY_OBUF)
+     OBUF:I->O                 2.571          PREADY_OBUF (PREADY)
+    ----------------------------------------
+    Total                      4.576ns (3.223ns logic, 1.352ns route)
+                                       (70.4% logic, 29.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.619ns (Levels of Logic = 2)
+  Source:            bridge/i2c_stat_0 (FF)
+  Destination:       PREADY (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: bridge/i2c_stat_0 to PREADY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.447   0.819  bridge/i2c_stat_0 (bridge/i2c_stat_0)
+     LUT2:I0->O            1   0.203   0.579  apb/PREADY1 (PREADY_OBUF)
+     OBUF:I->O                 2.571          PREADY_OBUF (PREADY)
+    ----------------------------------------
+    Total                      4.619ns (3.221ns logic, 1.398ns route)
+                                       (69.7% logic, 30.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'bridge/clk'
+  Total number of paths / destination ports: 10 / 2
+-------------------------------------------------------------------------
+Offset:              5.677ns (Levels of Logic = 2)
+  Source:            bridge/controller/state_2 (FF)
+  Destination:       i2c_sda (PAD)
+  Source Clock:      bridge/clk rising
+
+  Data Path: bridge/controller/state_2 to i2c_sda
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             65   0.447   1.875  bridge/controller/state_2 (bridge/controller/state_2)
+     LUT6:I3->O            1   0.205   0.579  bridge/controller/GND_4_o_GND_4_o_OR_43_o (bridge/controller/GND_4_o_GND_4_o_OR_43_o)
+     IOBUF:T->IO               2.571          i2c_sda_IOBUF (i2c_sda)
+    ----------------------------------------
+    Total                      5.677ns (3.223ns logic, 2.454ns route)
+                                       (56.8% logic, 43.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    4.404|         |         |         |
+PCLK           |    4.640|         |         |         |
+bridge/clk     |    3.548|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    2.607|         |         |         |
+PCLK           |    3.422|         |         |         |
+bridge/clk     |    1.473|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock bridge/clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    4.129|         |         |         |
+PCLK           |    4.808|         |         |         |
+bridge/clk     |    4.540|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.71 secs
+ 
+--> 
+
+Total memory usage is 4499988 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

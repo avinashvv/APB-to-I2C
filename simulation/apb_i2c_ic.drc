@@ -1,0 +1,8 @@
+Release 14.2 Drc P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Wed Dec 14 23:12:16 2022
+
+drc -z apb_i2c_ic.ncd apb_i2c_ic.pcf
+
+DRC detected 0 errors and 0 warnings.

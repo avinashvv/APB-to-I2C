@@ -1,0 +1,25 @@
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/user/Desktop/fpga/apbtoi2c_code_5th_Sem/apb_i2c_tb_isim_beh.exe -prj C:/Users/user/Desktop/fpga/apbtoi2c_code_5th_Sem/apb_i2c_tb_beh.prj work.apb_i2c_tb work.glbl 
+ISim P.28xd (signature 0xa0883be4)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/user/Desktop/fpga/apbtoi2c_code_5th_Sem/i2c_master.v" into library work
+Analyzing Verilog file "C:/Users/user/Desktop/fpga/apbtoi2c_code_5th_Sem/i2c_bridge.v" into library work
+Analyzing Verilog file "C:/Users/user/Desktop/fpga/apbtoi2c_code_5th_Sem/apb_slave.v" into library work
+Analyzing Verilog file "C:/Users/user/Desktop/fpga/apbtoi2c_code_5th_Sem/apb_i2c_ic.v" into library work
+Analyzing Verilog file "C:/Users/user/Desktop/fpga/apbtoi2c_code_5th_Sem/apb_i2c_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module apb_slave
+Compiling module i2c_master
+Compiling module i2c_bridge
+Compiling module apb_i2c_ic
+Compiling module apb_i2c_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\apb_i2c_tb_isim_beh.exe.sim\libPortability.dll".
+Compiled 6 Verilog Units
+Built simulation executable C:/Users/user/Desktop/fpga/apbtoi2c_code_5th_Sem/apb_i2c_tb_isim_beh.exe
+Fuse Memory Usage: 29056 KB
+Fuse CPU Usage: 375 ms

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\DSD\avi\adld\apbtoi2c\apb_i2c_ic.ncd
+OUTFILE=E:\DSD\avi\adld\apbtoi2c\apb_i2c_ic.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=E:\DSD\avi\adld\apbtoi2c
+LICENSE=WebPack
+USER_INFO=__0_0_0

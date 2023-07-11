@@ -1,0 +1,4 @@
+verilog work "i2c_master.v"
+verilog work "i2c_bridge.v"
+verilog work "apb_slave.v"
+verilog work "apb_i2c_ic.v"

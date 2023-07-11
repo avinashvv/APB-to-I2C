@@ -1,0 +1,8 @@
+vhdtdtfi -lib work E:/DSD/avi/adld/apbtoi2c/apb_i2c_ic.v -lang verilog -prj apbtoi2c -o apb_i2c_ic.spl -module apb_i2c_ic -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 apb_i2c_ic.spl E:/DSD/avi/adld/apbtoi2c/apb_i2c_ic.sym 
+xst -intstyle ise -ifn "E:/DSD/avi/adld/apbtoi2c/apb_i2c_ic.xst" -ofn "E:/DSD/avi/adld/apbtoi2c/apb_i2c_ic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 apb_i2c_ic.ngc apb_i2c_ic.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o apb_i2c_ic_map.ncd apb_i2c_ic.ngd apb_i2c_ic.pcf 
+par -w -intstyle ise -ol high -mt off apb_i2c_ic_map.ncd apb_i2c_ic.ncd apb_i2c_ic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml apb_i2c_ic.twx apb_i2c_ic.ncd -o apb_i2c_ic.twr apb_i2c_ic.pcf 
+bitgen -intstyle ise -f apb_i2c_ic.ut apb_i2c_ic.ncd 

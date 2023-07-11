@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/user/Desktop/fpga/apbtoi2c_code_5th_Sem/apb_i2c_tb_isim_beh.exe" -prj "C:/Users/user/Desktop/fpga/apbtoi2c_code_5th_Sem/apb_i2c_tb_beh.prj" "work.apb_i2c_tb" "work.glbl" 

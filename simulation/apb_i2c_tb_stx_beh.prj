@@ -1,0 +1,6 @@
+verilog isim_temp "i2c_master.v"
+verilog isim_temp "i2c_bridge.v"
+verilog isim_temp "apb_slave.v"
+verilog isim_temp "apb_i2c_ic.v"
+verilog isim_temp "apb_i2c_tb.v"
+verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

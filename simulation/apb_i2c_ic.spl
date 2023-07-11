@@ -1,0 +1,19 @@
+[Inputs]
+PCLK
+CLK
+PRESETn
+PSEL
+PENABLE
+PWrite
+=PADDR[31:0]=
+=PWDATA[31:0]=
+[Outputs]
+PREADY
+PSLVERR
+=PRDATA[31:0]=
+[BiDir]
+i2c_scl
+i2c_sda
+[ATTRIBUTES]
+VeriModel apb_i2c_ic
+
